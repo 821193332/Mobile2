@@ -77,9 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initFragment() {
         fragments =new ArrayList<>();
-
         fragments.add(new NetAudioFragment());
-
         fragments.add(new RecyclerViewFragment());
     }
 
