@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.xiangmu.l.MainActivity">
 
-</RelativeLayout>
+    <!--标题栏-->
+    <include layout="@layout/titlebar" />
+
+    <!--帧布局-->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--RadioGroup-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11000000"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb_net_audio"
+            style="@style/bottom_tab_style"
+            android:drawableTop="@drawable/rb_net_audio_selector"
+            android:text="网络音乐"
+
+            />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb_recyclerview"
+            style="@style/bottom_tab_style"
+            android:drawableTop="@drawable/rb_net_video_selector"
+            android:text="Recyclerview"
+
+            />
+
+
+    </RadioGroup>
+
+</LinearLayout>
